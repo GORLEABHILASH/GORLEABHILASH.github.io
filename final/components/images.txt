@@ -1,0 +1,44 @@
+image-file-name:background.jpg
+Owner: Abhilash Kumar Gorle
+image-alt:picture of handsome man standing
+
+
+image-file-name:profilepicture.png
+Owner: Abhilash Kumar Gorle
+image-alt: picture of handsome man in the city of lights
+
+
+image-file-name:cloud.jpg
+image-url:https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTEwfHxjbG91ZCUyMGNvbXB1dGluZ3xlbnwwfHwwfHx8MA%3D%3D
+image-alt:picture of cloud example cloud architecture diagram
+
+image-file-name:contactme.avif
+image-url:https://images.unsplash.com/photo-1604357209793-fca5dca89f97?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bWFwc3xlbnwwfHwwfHx8MA%3D%3D
+image-alt:picture of a person holding his mobile and navigating using google maps
+
+
+
+image-file-name:Devops.jpg
+image-url:https://images.unsplash.com/photo-1667372335936-3dc4ff716017?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+image-alt:picture of devops architecture
+
+
+image-file-name:QA.avif
+image-url:https://images.unsplash.com/photo-1519336367661-eba9c1dfa5e9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVzdGluZ3xlbnwwfHwwfHx8MA%3D%3D
+image-alt:picture of a person performing testing
+
+
+image-file-name:websitedeployment.jpg
+image-url:https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzl8fHdlYnNpdGUlMjBkZXZlbG9wbWVudHxlbnwwfHwwfHx8MA%3D%3D
+image-alt:picture of a website health status
+
+
+
+image-file-name:websitedesign.avif
+image-url:https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D
+image-alt:picture of a website design
+
+
+image-file-name:websitedevelopment.avif
+image-url:https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2Vic2l0ZSUyMGRldmVsb3BtZW50fGVufDB8fDB8fHww
+image-alt:picture of code written on a computer

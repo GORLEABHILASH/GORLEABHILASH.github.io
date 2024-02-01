@@ -1,0 +1,332 @@
+.main {
+  display: grid;
+  grid-area: main;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.main__title{
+  display: flex;
+  color: white;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.registar-form {
+
+  display: grid;
+  grid-template-columns: auto 12.5rem;
+
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  background-color: #333333;
+  color: white;
+
+
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+
+
+
+
+}
+
+
+.main__change-button{
+
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+
+  background: lightgrey;
+}
+
+.registar-form__button {
+
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+
+  background: lightgrey;
+}
+
+.registar-form__checkbox{
+  
+  grid-column: span 1;
+  margin-top: 1rem;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 2rem;
+}
+
+.registar-form__label--checkbox{
+  padding-top: 1rem;
+  grid-column: span 4;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* padding-top: 1rem; */
+
+}
+
+
+.registar-form__label {
+  grid-column: span 5;
+  
+  
+}
+
+.registar-form__input {
+  grid-column: span 5;
+  height: 2rem;
+
+}
+
+.registar-form__input--tier{
+  padding-bottom: 1rem;
+}
+
+.registar-form__button {
+  grid-column: span 2;
+  margin-top: 1rem;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  max-width: 16rem;
+
+  background-color: rgb(255, 127, 127);
+}
+
+
+
+.registar-form__message{
+  grid-column: span 5;
+  color: red;
+}
+
+
+.registar-form__required {
+
+  margin-left: 1rem;
+
+  color: red;
+}
+
+
+.registar-form__error--name{
+  grid-column: span 5;
+  display: none;
+  color: red;
+}
+
+.registar-form__error--name.registar-form__Invalid {
+ 
+  display: initial;
+  color: red;
+}
+
+
+
+.registar-form__error--email{
+  grid-column: span 5;
+  padding-top: 2rem;
+  color: red;
+}
+
+
+
+.registar-form__error--confirm-email{
+  padding-top: 2rem;
+  grid-column: span 5;
+  color: red;
+}
+
+.registar-form__label--tier{
+  padding-top: 1rem;
+}
+
+
+.registar-form__button:hover {
+  background: greenyellow;
+}
+
+
+
+@media(min-width:40rem) {
+
+ 
+  .main {
+
+    grid-area: main;
+
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+  }
+
+  .registar-form {
+
+    display: grid;
+    grid-template-columns: 10rem 1fr;
+    grid-gap: 1rem;
+  
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  
+    background: #333333;
+    color: white;
+  
+  
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  
+  
+
+  
+  }
+  
+  .registar-form__button {
+  
+    padding: 0.7em;
+    width: 100%;
+    border: 0;
+  
+    background: lightgrey;
+  }
+  
+  .registar-form__checkbox{
+
+
+   
+    height: 2rem;
+    grid-column: span 1/2;
+    padding-top: 1rem;
+    margin-left: 4rem;
+    
+    
+    
+  
+  } 
+  
+   .registar-form__label--checkbox{
+    grid-column: span 2/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+  
+  }
+
+  .registar-form__message{
+    grid-column: span 1/5;
+  }
+  
+  
+  
+  .registar-form__label {
+    grid-column: span 1/2;
+    padding-top: 1rem;
+    text-align: right;
+    
+  }
+  
+  .registar-form__input {
+    grid-column: span 2/5;
+    margin-left: 1rem;
+    width: 19rem;
+    height: 3rem;
+  
+  }
+
+  
+ 
+  
+  .registar-form__button {
+    grid-column: span 2/5;
+    margin-top: 1rem;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    max-width: 18rem;
+  
+    background-color: rgb(255, 127, 127);
+  }
+  
+
+  
+  .registar-form__required {
+  
+   margin-right: 2rem;
+   margin-left: 0;
+  
+    color: red;
+  }
+  
+
+  
+  .registar-form__error--name{
+    text-align: center;
+    grid-column: span 5/5;
+    display: none;
+
+    color: red;
+  }
+  
+  .registar-form__error--name.registar-form__Invalid {
+   
+    display: initial;
+
+    color: red;
+  }
+  
+  
+  
+  .registar-form__error--email{
+    text-align: center;
+    grid-column: span 5/5;
+
+    color: red;
+  }
+  
+
+  
+  .registar-form__error--confirm-email{
+    text-align: center;
+    grid-column: span 5/5;
+    
+    color: red;
+  }
+  
+  
+  .main__change-button{
+    display: flex;
+    padding: 0.7em;
+    width: 100%;
+    border: 0;
+    align-items: center;
+    border-radius: 1rem;
+    background: lightgrey;
+  }
+  
+  
+  .registar-form__button:hover {
+    background: greenyellow;
+  }
+  
+
+ 
+
+
+}

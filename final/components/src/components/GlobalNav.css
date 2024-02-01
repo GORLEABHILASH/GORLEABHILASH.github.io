@@ -1,0 +1,151 @@
+
+ /*below CSS adapted from https://css.gg under the MIT License */
+
+
+ .nav-menu__button{
+    grid-area: hammenu;
+  
+  
+  border:none;
+  
+  background: inherit;
+  
+  padding: 1rem;
+
+    
+  cursor: pointer;
+  text-decoration: underline ;
+  font-size: 1rem;
+  
+  }
+
+  .global-nav__list{
+   
+   
+    
+   position: absolute;
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    top: 11%;
+    left: 80%;
+   
+    width: 7rem;
+   
+    
+  
+    color: white;
+    
+    overflow: hidden;
+    list-style-type: none;
+    }
+    
+  
+ .global-nav__list.open{
+  
+  max-height: initial;
+  overflow: visible;
+
+  
+  }
+
+
+.global-nav__list {
+    display: flex;
+    flex-direction: column ;
+
+    text-align: left;
+}
+
+
+
+
+
+.global-nav__link {
+display: inline-block;
+padding: 1rem 1rem;
+width:7rem;
+font-size: 1.3rem;
+color: white;
+background-color: black;
+text-decoration: none;
+}
+.global-nav__link:hover {
+background-color: dodgerblue;
+
+color: black;
+}
+
+.global-nav__list.global-nav__list--hidden{
+    display: none;
+}
+
+@media (width > 44rem)
+{
+
+
+    .nav-menu__button {
+        display: none; 
+       
+    
+      }
+    
+      .nav-menu {
+        grid-area: navmenu;
+        grid-column-start: 1;
+        grid-column-end: 13;
+        display: flex;
+        
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+        
+        }
+        
+        
+        
+        .global-nav__list {
+         display: flex;
+         flex-direction: row;
+          position: static;
+         
+          max-height: initial;
+          width: 100%;
+          gap: 0.063rem;
+        
+          padding-top: 0.5rem;
+          padding-left: 0;
+        
+          list-style-type: none;
+        
+        }
+        
+        .global-nav__item {
+          grid-column: span 4;
+          text-align: center;
+          width: 100%;
+        }
+      
+        .global-nav__link{
+          font-size: medium;
+    
+          
+        }
+
+        .global-nav__link:hover {
+          background-color: dodgerblue;
+          border-radius: 1rem;
+          color: black;
+          }
+    .global-nav__toggle{
+        display: none;
+    }
+ 
+    .global-nav__list.global-nav__list--hidden{
+        display: flex;
+    }
+
+
+  
+
+}
