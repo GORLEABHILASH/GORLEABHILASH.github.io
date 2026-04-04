@@ -1,9 +1,0 @@
-.page {
-    display: grid;
-    grid-template-areas:
-      "header header"
-      "main main"
-      "footer footer";
-    grid-template-rows: auto auto auto;
-  }
-
