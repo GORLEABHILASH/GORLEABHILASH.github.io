@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhilash Kumar Gorle — Software Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root{
+      --accent:#60a5fa;
+      --accent2:#93c5fd;
+      --dim:#6b7a99;
+      --border:#1a2540;
+      --card:#0d1529;
+      --white:#f0f4ff;
+      --bg:#0a0f1e;
+      --container:1100px;
+      --side-padding:24px;
+    }
+
+    *,
+    *::before,
+    *::after{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+      min-width:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      overflow-x:clip;
+      overflow-y:scroll;
+      scrollbar-gutter:stable;
+      width:100%;
+    }
+
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:#c9d1e0;
+      line-height:1.8;
+      font-size:17px;
+      width:100%;
+      max-width:100%;
+      overflow-x:clip;
+      position:relative;
+    }
+
+    img{
+      display:block;
+      max-width:100%;
+      height:auto;
+    }
+
+    .container,
+    .nav-inner,
+    .hero-wrap{
+      width:100%;
+      max-width:var(--container);
+      margin-inline:auto;
+      padding-inline:var(--side-padding);
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      left:0;
+      right:0;
+      width:100%;
+      max-width:100%;
+      background:rgba(10,15,30,0.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+      z-index:99;
+      overflow-x:clip;
+    }
+
+    .nav-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:24px;
+      padding-top:18px;
+      padding-bottom:18px;
+    }
+
+    .logo{
+      font-size:18px;
+      font-weight:700;
+      color:var(--white);
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
+    .logo span{
+      color:var(--accent);
+    }
+
+    .nav-links{
+      display:flex;
+      gap:28px;
+      list-style:none;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      max-width:100%;
+    }
+
+    .nav-links a{
+      color:var(--dim);
+      font-size:14px;
+      text-decoration:none;
+      font-weight:500;
+      transition:color .2s ease;
+      white-space:nowrap;
+    }
+
+    .nav-links a:hover{
+      color:var(--white);
+    }
+
+    section{
+      width:100%;
+      max-width:100%;
+      padding:100px 0;
+      border-bottom:1px solid var(--border);
+      overflow-x:clip;
+    }
+
+    .hero-section{
+      padding:70px 0 50px;
+    }
+
+    .hero-wrap{
+      text-align:center;
+      overflow-x:clip;
+    }
+
+    .profile-img{
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      object-fit:cover;
+      object-position:center 20%;
+      border:3px solid var(--accent);
+      margin:0 auto 32px;
+      max-width:min(220px, 80vw);
+      max-height:min(220px, 80vw);
+    }
+
+    .avail{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      font-size:14px;
+      color:var(--accent);
+      background:rgba(96,165,250,0.08);
+      border:1px solid rgba(96,165,250,0.2);
+      padding:8px 18px;
+      border-radius:20px;
+      margin-bottom:28px;
+      flex-wrap:wrap;
+      max-width:100%;
+    }
+
+    .status-dot{
+      width:8px;
+      height:8px;
+      background:#34d399;
+      border-radius:50%;
+      flex-shrink:0;
+      animation:pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse{
+      0%,100%{opacity:1}
+      50%{opacity:.3}
+    }
+
+    h1{
+      font-size:clamp(40px, 7vw, 88px);
+      font-weight:700;
+      line-height:1.08;
+      color:var(--white);
+      margin-bottom:20px;
+      text-align:center;
+      max-width:100%;
+      overflow-wrap:anywhere;
+    }
+
+    h1 span{
+      color:var(--accent);
+    }
+
+    h2{
+      font-size:32px;
+      font-weight:700;
+      color:var(--white);
+      margin-bottom:40px;
+      line-height:1.2;
+      overflow-wrap:anywhere;
+    }
+
+    .tag{
+      font-size:13px;
+      color:var(--accent);
+      letter-spacing:2px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+      font-weight:600;
+    }
+
+    .hero-role{
+      font-size:22px;
+      color:var(--dim);
+      font-weight:500;
+      margin-bottom:20px;
+      overflow-wrap:anywhere;
+    }
+
+    .hero-desc{
+      font-size:17px;
+      color:var(--dim);
+      max-width:760px;
+      margin:0 auto 36px;
+      text-align:center;
+      line-height:1.9;
+      overflow-wrap:anywhere;
+    }
+
+    .hero-btns-center{
+      display:flex;
+      gap:16px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      margin-bottom:40px;
+      max-width:100%;
+    }
+
+    .btn-primary,
+    .btn-outline{
+      padding:14px 32px;
+      font-size:15px;
+      font-family:'Inter',sans-serif;
+      font-weight:600;
+      border-radius:8px;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:220px;
+      max-width:100%;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      background:var(--accent);
+      color:#0a0f1e;
+      border:none;
+    }
+
+    .btn-primary:hover{
+      background:var(--accent2);
+    }
+
+    .btn-outline{
+      background:transparent;
+      color:var(--white);
+      border:1px solid #2a3a5c;
+    }
+
+    .btn-outline:hover{
+      border-color:var(--accent);
+      color:var(--accent);
+    }
+
+    .social-links{
+      display:flex;
+      gap:20px;
+      justify-content:center;
+      flex-wrap:wrap;
+      max-width:100%;
+    }
+
+    .social-links a{
+      color:var(--dim);
+      font-size:13px;
+      text-decoration:none;
+      font-weight:500;
+      border:1px solid var(--border);
+      padding:8px 18px;
+      border-radius:6px;
+      transition:.2s ease;
+      max-width:100%;
+    }
+
+    .social-links a:hover{
+      color:var(--accent);
+      border-color:var(--accent);
+    }
+
+    .skills-grid{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .skill-card,
+    .proj-card,
+    .edu-item,
+    .contact-link{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:12px;
+      min-width:0;
+      max-width:100%;
+    }
+
+    .skill-card{
+      padding:28px;
+      transition:border-color .2s, transform .2s;
+    }
+
+    .skill-card:hover{
+      border-color:var(--accent);
+      transform:translateY(-2px);
+    }
+
+    .skill-label{
+      font-size:13px;
+      color:var(--accent);
+      letter-spacing:1px;
+      font-weight:600;
+      margin-bottom:14px;
+      text-transform:uppercase;
+    }
+
+    .skill-list{
+      font-size:15px;
+      color:#a0aec0;
+      line-height:2.2;
+      overflow-wrap:anywhere;
+    }
+
+    .exp-item{
+      display:grid;
+      grid-template-columns:160px minmax(0, 1fr);
+      gap:32px;
+      margin-bottom:52px;
+      align-items:start;
+    }
+
+    .exp-date-col{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+      padding-top:3px;
+    }
+
+    .exp-logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      object-fit:contain;
+      max-width:100%;
+    }
+
+    .exp-date{
+      font-size:13px;
+      color:var(--dim);
+      line-height:1.8;
+      font-weight:500;
+      text-align:center;
+    }
+
+    .exp-title{
+      font-size:19px;
+      font-weight:600;
+      color:var(--white);
+      margin-bottom:6px;
+      overflow-wrap:anywhere;
+    }
+
+    .exp-co{
+      font-size:15px;
+      color:var(--accent);
+      margin-bottom:12px;
+      font-weight:500;
+      overflow-wrap:anywhere;
+    }
+
+    .exp-desc{
+      font-size:15px;
+      color:#8892a4;
+      line-height:1.9;
+      overflow-wrap:anywhere;
+    }
+
+    .proj-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:20px;
+    }
+
+    .proj-card{
+      padding:28px;
+      transition:border-color .2s, transform .2s;
+    }
+
+    .proj-card:hover{
+      border-color:var(--accent);
+      transform:translateY(-3px);
+    }
+
+    .proj-title{
+      font-size:17px;
+      font-weight:600;
+      color:var(--white);
+      margin-bottom:10px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:8px;
+      overflow-wrap:anywhere;
+    }
+
+    .proj-arrow{
+      color:var(--accent);
+      font-size:20px;
+      text-decoration:none;
+      flex-shrink:0;
+    }
+
+    .proj-desc{
+      font-size:14px;
+      color:#8892a4;
+      line-height:1.9;
+      margin-bottom:16px;
+      overflow-wrap:anywhere;
+    }
+
+    .proj-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+
+    .pt{
+      font-size:12px;
+      background:rgba(96,165,250,0.08);
+      border:1px solid rgba(96,165,250,0.2);
+      color:var(--accent);
+      padding:5px 12px;
+      border-radius:20px;
+      font-weight:500;
+      max-width:100%;
+    }
+
+    .edu-item{
+      padding:28px;
+      margin-bottom:16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .edu-left{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex:1;
+    }
+
+    .edu-logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      object-fit:contain;
+      flex-shrink:0;
+    }
+
+    .edu-deg{
+      font-size:17px;
+      font-weight:600;
+      color:var(--white);
+      margin-bottom:6px;
+      overflow-wrap:anywhere;
+    }
+
+    .edu-sch{
+      font-size:15px;
+      color:var(--accent);
+      font-weight:500;
+      overflow-wrap:anywhere;
+    }
+
+    .edu-meta{
+      font-size:14px;
+      color:var(--dim);
+      margin-top:6px;
+      overflow-wrap:anywhere;
+    }
+
+    .edu-badge{
+      background:rgba(96,165,250,0.08);
+      border:1px solid rgba(96,165,250,0.2);
+      color:var(--accent);
+      font-size:14px;
+      font-weight:600;
+      padding:6px 18px;
+      border-radius:20px;
+      white-space:nowrap;
+      flex-shrink:0;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:14px;
+    }
+
+    .contact-link{
+      padding:22px 24px;
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:16px;
+    }
+
+    .contact-text{
+      font-size:15px;
+      color:var(--white);
+      font-weight:500;
+      overflow-wrap:anywhere;
+    }
+
+    .contact-val{
+      font-size:13px;
+      color:var(--dim);
+      overflow-wrap:anywhere;
+      word-break:break-word;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 0;
+      font-size:14px;
+      color:var(--dim);
+      width:100%;
+      max-width:100%;
+      overflow-x:clip;
+    }
+
+    @media (max-width: 900px){
+      .nav-inner{
+        flex-direction:column;
+        justify-content:center;
+      }
+
+      .nav-links{
+        justify-content:center;
+        gap:16px;
+      }
+
+      .skills-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+      }
+
+      .proj-grid,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .exp-item{
+        grid-template-columns:1fr;
+        gap:18px;
+      }
+
+      .exp-date-col{
+        align-items:flex-start;
+      }
+    }
+
+    @media (max-width: 640px){
+      :root{
+        --side-padding:18px;
+      }
+
+      section{
+        padding:72px 0;
+      }
+
+      .hero-section{
+        padding:50px 0 32px;
+      }
+
+      .profile-img{
+        width:180px;
+        height:180px;
+      }
+
+      .hero-role{
+        font-size:18px;
+      }
+
+      .hero-desc{
+        font-size:15px;
+      }
+
+      .btn-primary,
+      .btn-outline{
+        width:100%;
+        min-width:0;
+      }
+
+      .skills-grid{
+        grid-template-columns:1fr;
+      }
+
+      .edu-item{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .edu-left{
+        align-items:flex-start;
+      }
+
+      h2{
+        font-size:28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Abhilash Kumar <span>Gorle</span></span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="about" class="hero-section">
+    <div class="hero-wrap">
+      <img src="https://drive.google.com/thumbnail?id=19c3SKjYVjXLZwP6MEc8ZtvZn3FynPk4S&sz=w800" alt="Abhilash Kumar Gorle" class="profile-img"/>
+      <div class="avail"><span class="status-dot"></span>Available for full-time roles · F1 OPT</div>
+      <h1>Abhilash <span>Kumar Gorle</span></h1>
+      <p class="hero-role">Software Engineer &amp; Distributed Systems Enthusiast</p>
+      <p class="hero-desc">
+        4+ years building distributed systems, cloud infrastructure, and AI-powered applications.
+        MS Information Systems, Northeastern University. AWS Certified.
+      </p>
+
+      <div class="hero-btns-center">
+        <a href="https://drive.google.com/uc?export=download&id=1LppL7zNji7S60u3GonrAI1OyeDDhY4Rf" class="btn-primary" target="_blank">↓ Download Resume</a>
+        <a href="#contact" class="btn-outline">✉ Get In Touch</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://linkedin.com/in/abhilash-kumar-gorle/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/GORLEABHILASH" target="_blank">GitHub</a>
+        <a href="mailto:gorle.abhilash@gmail.com">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <p class="tag">expertise</p>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><div class="skill-label">Languages</div><div class="skill-list">Python<br>Go<br>Java / Spring Boot<br>TypeScript<br>SQL</div></div>
+        <div class="skill-card"><div class="skill-label">Cloud &amp; Infra</div><div class="skill-list">AWS (Solutions Arch.)<br>AWS Developer Assoc.<br>Terraform<br>Docker / Kubernetes</div></div>
+        <div class="skill-card"><div class="skill-label">AI / ML</div><div class="skill-list">LangChain<br>AWS Bedrock<br>RAG pipelines<br>MCP · Agentic AI</div></div>
+        <div class="skill-card"><div class="skill-label">Distributed Systems</div><div class="skill-list">Raft consensus (Go)<br>Paxos · BFT<br>CRDTs<br>Event-driven arch.</div></div>
+        <div class="skill-card"><div class="skill-label">Frontend</div><div class="skill-list">React · Next.js<br>Vue.js<br>Chart.js<br>REST · GraphQL</div></div>
+        <div class="skill-card"><div class="skill-label">Data</div><div class="skill-list">Oracle PL/SQL<br>PostgreSQL<br>DynamoDB<br>Kafka</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container">
+      <p class="tag">career</p>
+      <h2>Experience</h2>
+
+      <div class="exp-item">
+        <div class="exp-date-col">
+          <img src="https://drive.google.com/thumbnail?id=1tO0dxPX8ibwCwlUgfrhWvt5Fu-5zUmyN&sz=w400" alt="BeOne Medicines" class="exp-logo"/>
+          <div class="exp-date">Jun 2024 – Dec 2024</div>
+        </div>
+        <div>
+          <div class="exp-title">Software Engineer Intern</div>
+          <div class="exp-co">BeOne Medicines · San Mateo, CA</div>
+          <div class="exp-desc">Developed and deployed cloud-native applications on AWS. Integrated AI tooling to streamline internal workflows and reduce operational overhead.</div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date-col">
+          <img src="https://drive.google.com/thumbnail?id=1rCCBKU5MMrPq1iYfWy3FNusRXm67_Smq&sz=w400" alt="Credera" class="exp-logo"/>
+          <div class="exp-date"> Mar 2022 – Aug 2023</div>
+        </div>
+        <div>
+          <div class="exp-title">Software Engineer</div>
+          <div class="exp-co">Credera · Hyderabad</div>
+          <div class="exp-desc">Built scalable microservices and REST APIs. Led backend development for client-facing products on Java/Spring Boot with AWS infrastructure.</div>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-date-col">
+          <img src="https://drive.google.com/thumbnail?id=1Qru5vJM_l4__02abjoNe1Ak58Go_LOyM&sz=w400" alt="Accenture" class="exp-logo"/>
+          <div class="exp-date">Jul 2019 – Sep 2021</div>
+        </div>
+        <div>
+          <div class="exp-title">Software Engineer</div>
+          <div class="exp-co">Accenture · Chennai</div>
+          <div class="exp-desc">Full-stack development across enterprise projects. Worked on Oracle PL/SQL, Java J2EE, and frontend systems serving millions of users.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <p class="tag">builds</p>
+      <h2>Projects</h2>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-title">AI Developer Assistant <a href="https://github.com/GORLEABHILASH" target="_blank" class="proj-arrow">↗</a></div>
+          <div class="proj-desc">Agentic AI assistant using LangChain, MCP, RAG pipelines, and AWS Bedrock for context-aware code generation and task automation.</div>
+          <div class="proj-tags"><span class="pt">LangChain</span><span class="pt">AWS Bedrock</span><span class="pt">RAG</span><span class="pt">MCP</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-title">Raft Consensus in Go <a href="https://github.com/GORLEABHILASH" target="_blank" class="proj-arrow">↗</a></div>
+          <div class="proj-desc">Self-directed implementation of the Raft distributed consensus algorithm in Go — leader election, log replication, and fault tolerance.</div>
+          <div class="proj-tags"><span class="pt">Go</span><span class="pt">Distributed Systems</span><span class="pt">Raft</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-title">Java Music Player <a href="https://github.com/GORLEABHILASH" target="_blank" class="proj-arrow">↗</a></div>
+          <div class="proj-desc">Spotify-like music player implementing 10+ Gang of Four design patterns — Observer, Strategy, Decorator, and more.</div>
+          <div class="proj-tags"><span class="pt">Java</span><span class="pt">Design Patterns</span><span class="pt">GoF</span></div>
+        </div>
+
+        <div class="proj-card">
+          <div class="proj-title">Patient Health Dashboard <a href="https://github.com/GORLEABHILASH" target="_blank" class="proj-arrow">↗</a></div>
+          <div class="proj-desc">Pixel-perfect frontend dashboard with Chart.js, REST API integration, and responsive layout.</div>
+          <div class="proj-tags"><span class="pt">Chart.js</span><span class="pt">REST API</span><span class="pt">CSS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="container">
+      <p class="tag">academic</p>
+      <h2>Education</h2>
+
+      <div class="edu-item">
+        <div class="edu-left">
+          <img src="https://drive.google.com/thumbnail?id=1-mJlbD7iO-VHo3WmjBz3Hui1TtSQI_LK&sz=w400" alt="Northeastern University" class="edu-logo"/>
+          <div><div class="edu-deg">MS Information Systems</div><div class="edu-sch">Northeastern University</div><div class="edu-meta">Graduated December 2025 · Boston, MA</div></div>
+        </div>
+        <div class="edu-badge">GPA 3.8 / 4.0</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-left">
+          <img src="https://drive.google.com/thumbnail?id=1KwN2YZjlGng334qWNffDmSa_DvjVz4hG&sz=w400" alt="AWS Solutions Architect" class="edu-logo"/>
+          <div><div class="edu-deg">AWS Certified Solutions Architect</div><div class="edu-sch">Amazon Web Services</div><div class="edu-meta">Associate level</div></div>
+        </div>
+        <div class="edu-badge">Certified</div>
+      </div>
+
+      <div class="edu-item">
+        <div class="edu-left">
+          <img src="https://drive.google.com/thumbnail?id=1Aa8v198YakY0lTWQokqG_vEmBIqlP6kg&sz=w400" alt="AWS Developer" class="edu-logo"/>
+          <div><div class="edu-deg">AWS Certified Developer</div><div class="edu-sch">Amazon Web Services</div><div class="edu-meta">Associate level</div></div>
+        </div>
+        <div class="edu-badge">Certified</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="border-bottom:none">
+    <div class="container">
+      <p class="tag">reach out</p>
+      <h2>Contact</h2>
+      <p style="font-size:16px;color:var(--dim);margin-bottom:32px;max-width:520px">
+        Open to full-time software engineering roles. Authorized to work on F1 OPT. Can relocate to Boston, NYC, or Richmond, VA.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:gorle.abhilash@gmail.com" class="contact-link">
+          <span style="color:var(--accent);font-size:22px;flex-shrink:0">✉</span>
+          <div><div class="contact-text">Email</div><div class="contact-val">gorle.abhilash@gmail.com</div></div>
+        </a>
+        <a href="https://linkedin.com/in/abhilash-kumar-gorle/" target="_blank" class="contact-link">
+          <span style="color:var(--accent);font-size:16px;font-weight:700;flex-shrink:0">in</span>
+          <div><div class="contact-text">LinkedIn</div><div class="contact-val">linkedin.com/in/abhilash-kumar-gorle</div></div>
+        </a>
+        <a href="https://github.com/GORLEABHILASH" target="_blank" class="contact-link">
+          <span style="color:var(--accent);font-size:16px;font-weight:700;flex-shrink:0">gh</span>
+          <div><div class="contact-text">GitHub</div><div class="contact-val">github.com/GORLEABHILASH</div></div>
+        </a>
+        <a href="https://drive.google.com/uc?export=download&id=1LppL7zNji7S60u3GonrAI1OyeDDhY4Rf" target="_blank" class="contact-link">
+          <span style="color:var(--accent);font-size:22px;flex-shrink:0">↓</span>
+          <div><div class="contact-text">Resume</div><div class="contact-val">Download PDF</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">Built by Abhilash Kumar Gorle · Boston, MA · 2025</div>
+  </footer>
+
+</body>
+</html>
